@@ -2,16 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- font family link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font family link-->
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Frontend Mentor | Order summary card</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -42,14 +50,19 @@
         </p>
       </section>
       <section class="plan-section">
-        <div><img src="./images/icon-music.svg" alt="Music Icon" /></div>
-        <div>
-          <ul>
-            <li>Annual Plan</li>
-            <li>$59.99/year</li>
-          </ul>
+        <div class="plan-left">
+          <div class="plan-img-div">
+            <img src="./images/icon-music.svg" alt="Music Icon" />
+          </div>
+          <div class="plan-ul-div">
+            <ul>
+              <li>Annual Plan</li>
+              <li>$59.99/year</li>
+            </ul>
+          </div>
         </div>
-        <div>Change</div>
+
+        <div class="plan-right">Change</div>
       </section>
 
       <section class="button-section">

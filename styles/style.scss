@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+
+  background-image: url(../images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: hsl(225, 100%, 98%);
+}
+
+main {
+  width: 450px;
+  margin: 20px auto;
+  border-radius: 20px;
+  background-color: white;
+  .image-section {
+    min-height: 220px;
+    img {
+      border-radius: 20px 20px 0 0;
+    }
+  }
+
+  .summary-section {
+    text-align: center;
+    margin: 10px auto;
+    width: 80%;
+    h2 {
+      padding: 15px 0;
+    }
+  }
+
+  .plan-section {
+    margin: 20px auto;
+    padding: 20px 20px;
+    width: 80%;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: hsl(225, 100%, 98%);
+
+    .plan-left {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .plan-img-div {
+        height: 48px;
+      }
+
+      .plan-ul-div {
+        margin-left: 10px;
+        ul {
+          list-style-type: none;
+          margin-left: 5px;
+          li:first-child {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  .button-section {
+  }
+}
