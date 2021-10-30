@@ -33,6 +33,10 @@ main {
   background-color: white;
 }
 
+main p {
+  color: #757575;
+}
+
 main .image-section {
   min-height: 220px;
 }
@@ -94,5 +98,75 @@ main .plan-section .plan-left .plan-ul-div ul {
 
 main .plan-section .plan-left .plan-ul-div ul li:first-child {
   font-weight: 700;
+}
+
+main .plan-section .plan-left .plan-ul-div ul li:nth-child(2) {
+  color: #757575;
+}
+
+main .plan-section .plan-right {
+  text-decoration: underline;
+  color: #3829e0;
+  font-weight: 700;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+main .plan-section .plan-right:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #978fef;
+}
+
+main .button-section {
+  margin: 10px auto;
+  width: 80%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .button-section .button-1,
+main .button-section .button-2 {
+  height: 40px;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+main .button-section .button-1 {
+  width: 100%;
+  border: solid 1px #3829e0;
+  border-radius: 10px;
+  background-color: #3829e0;
+  color: #fff;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+main .button-section .button-1:hover {
+  background-color: #867de8;
+  border: solid 1px #867de8;
+}
+
+main .button-2 {
+  margin: 0 auto;
+  border: none;
+  background-color: white;
+  width: 200px;
+  color: #757575;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+main .button-2:hover {
+  color: #000;
 }
 /*# sourceMappingURL=style.css.map */

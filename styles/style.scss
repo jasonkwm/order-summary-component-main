@@ -25,6 +25,11 @@ main {
   margin: 20px auto;
   border-radius: 20px;
   background-color: white;
+
+  p {
+    color: #757575;
+  }
+
   .image-section {
     min-height: 220px;
     img {
@@ -69,11 +74,63 @@ main {
           li:first-child {
             font-weight: 700;
           }
+          li:nth-child(2) {
+            color: #757575;
+          }
         }
+      }
+    }
+
+    .plan-right {
+      text-decoration: underline;
+      color: hsl(245, 75%, 52%);
+      font-weight: 700;
+      transition: all 0.3s ease;
+      &:hover {
+        cursor: pointer;
+        text-decoration: none;
+        color: hsl(245, 75%, 75%);
       }
     }
   }
 
   .button-section {
+    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .button-1,
+    .button-2 {
+      height: 40px;
+      margin: 10px 0;
+      font-weight: 700;
+    }
+
+    .button-1 {
+      width: 100%;
+      border: solid 1px hsl(245, 75%, 52%);
+      border-radius: 10px;
+      background-color: hsl(245, 75%, 52%);
+      color: #fff;
+      transition: background-color 0.3s ease;
+      &:hover {
+        background-color: hsl(245, 70%, 70%);
+        border: solid 1px hsl(245, 70%, 70%);
+      }
+    }
+  }
+
+  .button-2 {
+    margin: 0 auto;
+    border: none;
+    background-color: white;
+    width: 200px;
+    color: #757575;
+    transition: all 0.3s ease;
+    &:hover {
+      color: #000;
+    }
   }
 }
