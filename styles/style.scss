@@ -17,12 +17,13 @@ body {
   background-image: url(../images/pattern-background-desktop.svg);
   background-repeat: no-repeat;
   background-size: 100%;
-  background-color: hsl(225, 100%, 98%);
+  background-color: hsl(225, 100%, 95%);
 }
 
 main {
-  width: 450px;
-  margin: 20px auto;
+  max-width: 450px;
+  width: 90%;
+  margin: auto;
   border-radius: 20px;
   background-color: white;
 
@@ -32,8 +33,10 @@ main {
 
   .image-section {
     min-height: 220px;
+
     img {
       border-radius: 20px 20px 0 0;
+      width: 100%;
     }
   }
 
@@ -44,6 +47,9 @@ main {
     h2 {
       padding: 15px 0;
     }
+    p {
+      font-size: 14px;
+    }
   }
 
   .plan-section {
@@ -51,6 +57,7 @@ main {
     padding: 20px 20px;
     width: 80%;
     border-radius: 10px;
+    font-size: 14px;
 
     display: flex;
     justify-content: space-between;
@@ -62,6 +69,7 @@ main {
       display: flex;
       justify-content: space-around;
       align-items: center;
+
       .plan-img-div {
         height: 48px;
       }
@@ -103,18 +111,19 @@ main {
     align-items: center;
     .button-1,
     .button-2 {
-      height: 40px;
-      margin: 10px 0;
       font-weight: 700;
     }
 
     .button-1 {
+      margin: 10px 0;
       width: 100%;
+      height: 40px;
       border: solid 1px hsl(245, 75%, 52%);
       border-radius: 10px;
       background-color: hsl(245, 75%, 52%);
       color: #fff;
       transition: background-color 0.3s ease;
+      box-shadow: 0 20px 20px rgba(56, 41, 224, 0.2);
       &:hover {
         background-color: hsl(245, 70%, 70%);
         border: solid 1px hsl(245, 70%, 70%);
@@ -123,10 +132,9 @@ main {
   }
 
   .button-2 {
-    margin: 0 auto;
+    margin: 25px auto;
     border: none;
     background-color: white;
-    width: 200px;
     color: #757575;
     transition: all 0.3s ease;
     &:hover {
@@ -134,3 +142,5 @@ main {
     }
   }
 }
+
+@import "desktop";
