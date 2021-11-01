@@ -13,12 +13,8 @@ I've decided to complete this mini-project using HTML & SCSS.
 
 
 ### Solution Screenshot
-These are my desktop & mobile solution.
 
-![My desktop solution for this challenge](./design/desktop-solution.jpg)
-
-
-![My mobile solution for this challenge](./design/mobile-solution.jpg)
+![My desktop solution for this challenge](./design/desktop-solution.png)
 
 ### Below is a link to my solution
 
