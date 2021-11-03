@@ -1,9 +1,79 @@
-* {
-  margin: 0;
-  padding: 0;
+/* Box sizing rules */
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
   line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 body {
@@ -14,12 +84,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 100vh;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "Red Hat Display", sans-serif;
-  font-size: 16px;
+  font-size: 0.875rem;
   background-image: url(../images/pattern-background-desktop.svg);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -29,44 +100,41 @@ body {
 main {
   max-width: 450px;
   width: 90%;
-  margin: auto;
   border-radius: 20px;
+  margin: 20px 0;
   background-color: white;
+  text-align: center;
 }
 
-main p {
+img {
+  border-radius: 20px 20px 0 0;
+}
+
+h1 {
+  margin: 10px auto 0 auto;
+  width: 80%;
+  padding: 10px 0;
+}
+
+h2 {
+  font-size: 0.875rem;
+}
+
+p {
   color: #757575;
 }
 
-main .image-section {
-  min-height: 220px;
+.summary-p {
+  margin: auto;
+  padding: 10px 0;
+  max-width: 30ch;
 }
 
-main .image-section img {
-  border-radius: 20px 20px 0 0;
-  width: 100%;
-}
-
-main .summary-section {
-  text-align: center;
-  margin: 10px auto;
-  width: 80%;
-}
-
-main .summary-section h2 {
-  padding: 15px 0;
-}
-
-main .summary-section p {
-  font-size: 14px;
-}
-
-main .plan-section {
+.plan-section {
   margin: 20px auto;
-  padding: 20px 20px;
+  padding: 20px;
   width: 80%;
   border-radius: 10px;
-  font-size: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,7 +147,7 @@ main .plan-section {
   background-color: #f5f7ff;
 }
 
-main .plan-section .plan-left {
+.plan-section .plan-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,100 +158,64 @@ main .plan-section .plan-left {
           align-items: center;
 }
 
-main .plan-section .plan-left .plan-img-div {
-  height: 48px;
+.plan-section .plan-left .plan-ul-div {
+  margin: auto 20px;
 }
 
-main .plan-section .plan-left .plan-ul-div {
-  margin-left: 10px;
-}
-
-main .plan-section .plan-left .plan-ul-div ul {
-  list-style-type: none;
-  margin-left: 5px;
-}
-
-main .plan-section .plan-left .plan-ul-div ul li:first-child {
-  font-weight: 700;
-}
-
-main .plan-section .plan-left .plan-ul-div ul li:nth-child(2) {
-  color: #757575;
-}
-
-main .plan-section .plan-right {
+.plan-section .plan-right {
+  border: none;
+  background-color: inherit;
   text-decoration: underline;
   color: #3829e0;
   font-weight: 700;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 
-main .plan-section .plan-right:hover {
+.plan-section .plan-right:hover, .plan-section .plan-right:active {
   cursor: pointer;
   text-decoration: none;
   color: #978fef;
 }
 
-main .button-section {
-  margin: 10px auto;
-  width: 80%;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-main .button-section .button-1,
-main .button-section .button-2 {
+.button-1,
+.button-2 {
   font-weight: 700;
+  display: block;
 }
 
-main .button-section .button-1 {
-  margin: 10px 0;
-  width: 100%;
-  height: 40px;
+.button-1 {
+  margin: 30px auto;
+  width: 80%;
+  height: 48px;
   border: solid 1px #3829e0;
   border-radius: 10px;
   background-color: #3829e0;
   color: #fff;
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
   -webkit-box-shadow: 0 20px 20px rgba(56, 41, 224, 0.2);
           box-shadow: 0 20px 20px rgba(56, 41, 224, 0.2);
 }
 
-main .button-section .button-1:hover {
+.button-1:hover {
   background-color: #867de8;
   border: solid 1px #867de8;
 }
 
-main .button-2 {
-  margin: 25px auto;
+.button-2 {
+  margin: 30px auto;
   border: none;
-  background-color: white;
+  background-color: transparent;
   color: #757575;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 
-main .button-2:hover {
+.button-2:hover, .button-2:active {
   color: #000;
 }
 
 @media screen and (min-width: 600px) {
-  main .summary-section p {
-    font-size: 16px;
+  body {
+    font-size: 1rem;
   }
-  main .plan-section {
-    font-size: 16px;
+  h2 {
+    font-size: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

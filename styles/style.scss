@@ -1,19 +1,16 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  line-height: 1.5;
+@import "reset";
+
+@function rem($size) {
+  @return $size / 16px * 1rem;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
-
+  justify-content: space-around;
+  align-items: center;
   font-family: "Red Hat Display", sans-serif;
-  font-size: 16px;
-
+  font-size: rem(14px);
   background-image: url(../images/pattern-background-desktop.svg);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -23,126 +20,101 @@ body {
 main {
   max-width: 450px;
   width: 90%;
-  margin: auto;
   border-radius: 20px;
+  margin: 20px 0;
   background-color: white;
+  text-align: center;
+}
 
-  p {
-    color: #757575;
-  }
+img {
+  border-radius: 20px 20px 0 0;
+}
 
-  .image-section {
-    min-height: 220px;
+h1 {
+  margin: 10px auto 0 auto;
+  width: 80%;
+  padding: 10px 0;
+}
 
-    img {
-      border-radius: 20px 20px 0 0;
-      width: 100%;
-    }
-  }
+h2 {
+  font-size: rem(14px);
+}
 
-  .summary-section {
-    text-align: center;
-    margin: 10px auto;
-    width: 80%;
-    h2 {
-      padding: 15px 0;
-    }
-    p {
-      font-size: 14px;
-    }
-  }
+p {
+  color: #757575;
+}
+.summary-p {
+  margin: auto;
+  padding: 10px 0;
+  max-width: 30ch;
+}
 
-  .plan-section {
-    margin: 20px auto;
-    padding: 20px 20px;
-    width: 80%;
-    border-radius: 10px;
-    font-size: 14px;
+.plan-section {
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  border-radius: 10px;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: hsl(225, 100%, 98%);
+
+  .plan-left {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
-    background-color: hsl(225, 100%, 98%);
-
-    .plan-left {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-
-      .plan-img-div {
-        height: 48px;
-      }
-
-      .plan-ul-div {
-        margin-left: 10px;
-        ul {
-          list-style-type: none;
-          margin-left: 5px;
-          li:first-child {
-            font-weight: 700;
-          }
-          li:nth-child(2) {
-            color: #757575;
-          }
-        }
-      }
-    }
-
-    .plan-right {
-      text-decoration: underline;
-      color: hsl(245, 75%, 52%);
-      font-weight: 700;
-      transition: all 0.3s ease;
-      &:hover,
-      &:active {
-        cursor: pointer;
-        text-decoration: none;
-        color: hsl(245, 75%, 75%);
-      }
+    .plan-ul-div {
+      margin: auto 20px;
     }
   }
 
-  .button-section {
-    margin: 10px auto;
-    width: 80%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .button-1,
-    .button-2 {
-      font-weight: 700;
-    }
-
-    .button-1 {
-      margin: 10px 0;
-      width: 100%;
-      height: 40px;
-      border: solid 1px hsl(245, 75%, 52%);
-      border-radius: 10px;
-      background-color: hsl(245, 75%, 52%);
-      color: #fff;
-      transition: background-color 0.3s ease;
-      box-shadow: 0 20px 20px rgba(56, 41, 224, 0.2);
-      &:hover,
-      &:active {
-        background-color: hsl(245, 70%, 70%);
-        border: solid 1px hsl(245, 70%, 70%);
-      }
-    }
-  }
-
-  .button-2 {
-    margin: 25px auto;
+  .plan-right {
     border: none;
-    background-color: white;
-    color: #757575;
-    transition: all 0.3s ease;
+    background-color: inherit;
+    text-decoration: underline;
+    color: hsl(245, 75%, 52%);
+    font-weight: 700;
     &:hover,
     &:active {
-      color: #000;
+      cursor: pointer;
+      text-decoration: none;
+      color: hsl(245, 75%, 75%);
     }
+  }
+}
+
+.button-1,
+.button-2 {
+  font-weight: 700;
+  display: block;
+}
+
+.button-1 {
+  margin: 30px auto;
+  width: 80%;
+  height: 48px;
+  border: solid 1px hsl(245, 75%, 52%);
+  border-radius: 10px;
+  background-color: hsl(245, 75%, 52%);
+  color: #fff;
+  box-shadow: 0 20px 20px rgba(56, 41, 224, 0.2);
+  &:hover {
+    background-color: hsl(245, 70%, 70%);
+    border: solid 1px hsl(245, 70%, 70%);
+  }
+}
+
+.button-2 {
+  margin: 30px auto;
+  border: none;
+  background-color: transparent;
+  color: #757575;
+  &:hover,
+  &:active {
+    color: #000;
   }
 }
 
