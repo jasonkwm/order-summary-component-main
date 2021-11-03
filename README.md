@@ -24,7 +24,7 @@ I've decided to complete this mini-project using HTML & SCSS.
 ## My Process
 
 ### Build with
-This project is build with ** HTML & SCSS** . i decided to use scss since the code in scss is much neater than plain css due to the fact that you can nest selector, the variables and much nicer, you get split up your scss code into multiple files and import them to your main scss file and code is similar to css so the learning curve is small. *Basically css but on steroids.*
+This project is build with **HTML & SCSS** . i decided to use scss since the code in scss is much neater than plain css due to the fact that you can nest selector, the variables and much nicer, you get split up your scss code into multiple files and import them to your main scss file and code is similar to css so the learning curve is small. *Basically css but on steroids.*
 
 ### What I learn
 I learn that sometimes it's easier to build **Mobile view** first than move to **Desktop view** after that. This way i dont have to remove most of the styles that i have to write for desktop view. I find that most of the time if i build a website desktop view first i would end up using media query to remove most of the styles that i wrote just to make it responsive with a few exception like *font-size* and so on.
